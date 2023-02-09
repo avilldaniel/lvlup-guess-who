@@ -1,6 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import {
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+  useEffect,
+  useState,
+} from "react";
 import Select, {
   DropdownIndicatorProps,
   components,
@@ -26,12 +32,52 @@ const OPTIONS: OptionType[] = [
   { value: "tanks", label: "TANKS" },
 ];
 
+type GrpSectionProps = {
+  cat: string;
+  champs: { name: string; img: string }[];
+  setSelected: Dispatch<
+    SetStateAction<{
+      category: string;
+      champ: string;
+    }>
+  >;
+  className: string;
+};
+
+const GrpSection = ({
+  cat,
+  champs,
+  setSelected,
+  className,
+}: GrpSectionProps) => (
+  <div className={`${className}`}>
+    <h1 className="font-ibm-semi text-5xl">{cat}</h1>
+    <ul className="h-[95%] inline-flex flex-col flex-wrap w-1/2">
+      {champs.map((champ, index) => (
+        <li key={index} className="font-sans text-2xl min-w-full">
+          <button
+            onClick={() =>
+              setSelected({
+                category: cat.toLocaleLowerCase(),
+                champ: champ.name,
+              })
+            }
+          >
+            {champ.name}
+          </button>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
 function App() {
   const [group, setGroup] = useState<
     SingleValue<{ value: string; label: string }>
   >(OPTIONS[0]);
 
   const { assassins, fighters, mages, marksmen, supports, tanks } = data;
+  const [selected, setSelected] = useState({ category: "", champ: "" });
   const [champs, setChamps] = useState(() => {
     return assassins.champs.map((champ) => ({
       ...champ,
@@ -109,10 +155,53 @@ function App() {
     );
   };
 
+  if (!selected.champ) {
+    return (
+      <div className="max-h-screen flex divide-x-4">
+        <GrpSection
+          cat="ASSASSINS"
+          champs={data.assassins.champs}
+          setSelected={setSelected}
+          className="w-1/6"
+        />
+        <GrpSection
+          cat="FIGHTERS"
+          champs={data.fighters.champs}
+          setSelected={setSelected}
+          className="w-1/6"
+        />
+        <GrpSection
+          cat="MAGES"
+          champs={data.mages.champs}
+          setSelected={setSelected}
+          className="w-1/6"
+        />
+        <GrpSection
+          cat="MARKSMEN"
+          champs={data.marksmen.champs}
+          setSelected={setSelected}
+          className="w-1/6"
+        />
+        <GrpSection
+          cat="SUPPORTS"
+          champs={data.supports.champs}
+          setSelected={setSelected}
+          className="w-1/6"
+        />
+        <GrpSection
+          cat="TANKS"
+          champs={data.tanks.champs}
+          setSelected={setSelected}
+          className="w-1/6"
+        />
+      </div>
+    );
+  }
+
   return (
     <div className="h-screen w-full flex flex-col justify-evenly items-center">
       {/* Select Dropdown */}
-      <div className="w-72 self-start -mt-10 ml-28">
+      {/* <div className="w-72 self-start -mt-10 ml-28">
         <Select
           isMulti={false}
           options={OPTIONS}
@@ -173,7 +262,11 @@ function App() {
             indicatorSeparator: () => ({ display: "none" }),
           }}
         />
-      </div>
+      </div> */}
+
+      <button onClick={() => setSelected({ category: "", champ: "" })}>
+        {"<-"} Go Back
+      </button>
 
       {/* Champ Grid */}
       <ul className="grid grid-cols-10 -mt-10 h-[65%] w-11/12 rounded-lg select-none">
