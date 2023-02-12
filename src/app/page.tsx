@@ -13,6 +13,7 @@ export type DataType = typeof data;
 import { TiArrowLeft } from "react-icons/ti";
 import { MdClose } from "react-icons/md";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type OptionType = {
   value: string;
@@ -367,10 +368,18 @@ function App() {
             )}
 
             {champ.selected && (
-              <MdClose
-                className="text-brick z-0 absolute -top-2 transition ease-in-out delay-150"
-                size={230}
-              />
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{
+                  type: "tween",
+                  ease: "easeIn",
+                  duration: 0.3,
+                }}
+                className="z-0 absolute -top-2"
+              >
+                <MdClose className="text-brick" size={230} />
+              </motion.div>
             )}
 
             <h3
