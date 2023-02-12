@@ -13,7 +13,8 @@ import Select, {
   SingleValue,
   GroupBase,
 } from "react-select";
-import data from "../champs.json";
+// import data from "../champs.json";
+import data from "../champsV2.json";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { MdClose } from "react-icons/md";
 import Image from "next/image";
@@ -41,7 +42,7 @@ type GrpSectionProps = {
       champ: string;
     }>
   >;
-  className: string;
+  className?: string;
 };
 
 const GrpSection = ({
@@ -51,10 +52,10 @@ const GrpSection = ({
   className,
 }: GrpSectionProps) => (
   <div className={`${className}`}>
-    <h1 className="font-ibm-semi text-5xl">{cat}</h1>
-    <ul className="h-[95%] inline-flex flex-col flex-wrap w-1/2">
+    <h1 className="font-ibm-semi text-4xl">{cat}</h1>
+    <ul className="h-[95%] inline-flex flex-col flex-wrap gap-x-2 ml-1">
       {champs.map((champ, index) => (
-        <li key={index} className="font-sans text-2xl min-w-full">
+        <li key={index} className="font-sans text-[1.3rem] min-w-full">
           <button
             onClick={() =>
               setSelected({
@@ -62,6 +63,7 @@ const GrpSection = ({
                 champ: champ.name,
               })
             }
+            className="hover:underline"
           >
             {champ.name}
           </button>
@@ -157,42 +159,46 @@ function App() {
 
   if (!selected.champ) {
     return (
-      <div className="max-h-screen flex divide-x-4">
+      <div className="max-h-screen flex divide-x-4 w-full">
         <GrpSection
           cat="ASSASSINS"
           champs={data.assassins.champs}
           setSelected={setSelected}
-          className="w-1/6"
+          // className="w-1/6"
+          className="w-[16%]"
         />
         <GrpSection
           cat="FIGHTERS"
           champs={data.fighters.champs}
           setSelected={setSelected}
-          className="w-1/6"
+          className="w-[20%]"
         />
         <GrpSection
           cat="MAGES"
           champs={data.mages.champs}
           setSelected={setSelected}
-          className="w-1/6"
+          className="w-[17%]"
         />
         <GrpSection
           cat="MARKSMEN"
           champs={data.marksmen.champs}
           setSelected={setSelected}
-          className="w-1/6"
+          // className="w-1/6"
+          className="w-[13%]"
         />
         <GrpSection
           cat="SUPPORTS"
           champs={data.supports.champs}
           setSelected={setSelected}
-          className="w-1/6"
+          // className="w-1/6"
+          className="w-[15%]"
         />
         <GrpSection
           cat="TANKS"
           champs={data.tanks.champs}
           setSelected={setSelected}
-          className="w-1/6"
+          // className="w-[10%] border-2 border-yellow"
+          className="w-[10%]"
         />
       </div>
     );

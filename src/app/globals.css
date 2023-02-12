@@ -6,6 +6,11 @@
   padding: 0 !important;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* ibm-plex-sans-300 - latin */
 @font-face {
   font-family: 'IBM Plex Sans Light';
