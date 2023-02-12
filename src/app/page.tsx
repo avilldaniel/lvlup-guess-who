@@ -324,7 +324,7 @@ function App() {
                   // const sound = new Audio("/sounds/low-thump.mp3");
                   // const sound = new Audio("/sounds/timer.mp3");
                   const sound = new Audio("/sounds/timer2.mp3");
-                  sound.load();
+                  // sound.load();
                   sound.play();
                 }
                 return prev.map((prevChamp) => {
