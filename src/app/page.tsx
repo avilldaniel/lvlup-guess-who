@@ -73,14 +73,11 @@ function App() {
   //   SingleValue<{ value: string; label: string }>
   // >(OPTIONS[0]);
 
-  const { assassins, fighters, mages, marksmen, supports, tanks } = data;
-  const [selected, setSelected] = useState({ category: "", champ: "" });
-  // const [champs, setChamps] = useState(() => {
-  //   return assassins.champs.map((champ) => ({
-  //     ...champ,
-  //     selected: false,
-  //   }));
-  // });
+  // const [selected, setSelected] = useState({ category: "", champ: "" });
+  const [selected, setSelected] = useState({
+    category: "supports",
+    champ: "THRESH",
+  });
   const [champs, setChamps] = useState<
     {
       selected: boolean;
@@ -314,7 +311,7 @@ function App() {
       </button>
 
       {/* Champ Grid */}
-      <ul className="grid grid-cols-10 -mt-10 h-[65%] w-11/12 rounded-lg select-none">
+      <ul className="grid grid-cols-10 h-[84%] w-full rounded-lg select-none">
         {champs.map((champ, index) => (
           <li
             className="relative flex justify-center items-center"
@@ -370,15 +367,18 @@ function App() {
             )}
 
             {champ.selected && (
-              <MdClose className="text-brick z-0 absolute -top-2" size={160} />
+              <MdClose
+                className="text-brick z-0 absolute -top-2 transition ease-in-out delay-150"
+                size={230}
+              />
             )}
 
             <h3
-              className={`absolute bottom-2 right-3 font-goth text-[1.8rem] text-right ${
+              className={`absolute bottom-2 right-3 font-goth text-[2.5rem] text-right leading-[3rem] ${
                 champ.selected ? "text-brick" : "text-yellow"
               }`}
               style={{
-                WebkitTextStroke: "6px black",
+                WebkitTextStroke: "9px black",
                 paintOrder: "stroke",
               }}
             >
