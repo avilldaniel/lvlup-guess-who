@@ -319,6 +319,14 @@ function App() {
             key={champ.name}
             onClick={() =>
               setChamps((prev) => {
+                if (!champ.selected) {
+                  // const sound = new Audio("/sounds/champ-ban.mp3");
+                  // const sound = new Audio("/sounds/low-thump.mp3");
+                  // const sound = new Audio("/sounds/timer.mp3");
+                  const sound = new Audio("/sounds/timer2.mp3");
+                  sound.load();
+                  sound.play();
+                }
                 return prev.map((prevChamp) => {
                   if (prevChamp.name === champ.name) {
                     return {
