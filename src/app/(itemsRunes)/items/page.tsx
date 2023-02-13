@@ -16,8 +16,10 @@ const Page = () => {
       <ul className="w-2/3 flex flex-wrap gap-x-20">
         {Object.keys(data.itemType).map((item, index) => (
           <li key={index}>
-            <h1 className="font-goth tracking-wider text-4xl">
-              {item.slice(0, 1).toLocaleUpperCase() + item.slice(1)}
+            {/* <h1 className="font-goth tracking-wider text-4xl"> */}
+            <h1 className="font-goth tracking-tight text-4xl">
+              {/* {item.slice(0, 1).toLocaleUpperCase() + item.slice(1)} */}
+              {item.toLocaleUpperCase()}
             </h1>
             <ul className="flex flex-wrap gap-1">
               {data.itemType[item as keyof DataType["itemType"]].map((item) => (
@@ -42,20 +44,22 @@ const Page = () => {
         ))}
       </ul>
       <section className="w-1/3 flex flex-col pt-20 items-center">
-        <h1 className="font-goth text-5xl tracking-wider">
+        <h1 className="font-ibm-semi text-5xl tracking-wide">
           {currItem ? currItem.name : "Item name"}
         </h1>
         <div
-          className={`my-8 h-40 aspect-square ${!currItem.name && "border-2"}`}
+          className={`my-8 h-48 aspect-square ${!currItem.name && "border-2"}`}
         >
           {currItem.name ? (
-            <Image
-              className="h-full w-full object-contain rounded-md rounded-tl-3xl rounded-br-3xl"
-              height={100}
-              width={100}
-              src={currItem.img}
-              alt={currItem.name}
-            />
+            <div className="rounded-md rounded-tl-3xl rounded-br-3xl border-[12px] border-black">
+              <Image
+                className="h-full w-full object-contain rounded-tl-lg rounded-br-lg"
+                height={128}
+                width={128}
+                src={currItem.img}
+                alt={currItem.name}
+              />
+            </div>
           ) : (
             <h1 className="text-center font-ibm-light text-4xl mt-10">
               Select an item!
