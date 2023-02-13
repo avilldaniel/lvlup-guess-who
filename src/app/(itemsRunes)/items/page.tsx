@@ -1,6 +1,5 @@
 "use client";
 
-import type { NextPage } from "next";
 import Image from "next/image";
 import { useState } from "react";
 import data from "../../../itemsV3.json";
@@ -17,7 +16,7 @@ const Page = () => {
       <ul className="w-2/3 flex flex-wrap gap-x-20">
         {Object.keys(data.itemType).map((item, index) => (
           <li key={index}>
-            <h1 className="font-goth tracking-wider text-4xl mt-2">
+            <h1 className="font-goth tracking-wider text-4xl">
               {item.slice(0, 1).toLocaleUpperCase() + item.slice(1)}
             </h1>
             <ul className="flex flex-wrap gap-1">
@@ -31,8 +30,8 @@ const Page = () => {
                 >
                   <Image
                     className="h-full w-full object-contain"
-                    width={20}
-                    height={20}
+                    width={128}
+                    height={128}
                     src={item.img}
                     alt={item.name}
                   />
@@ -46,8 +45,10 @@ const Page = () => {
         <h1 className="font-goth text-5xl tracking-wider">
           {currItem ? currItem.name : "Item name"}
         </h1>
-        <div className="my-8 h-40 aspect-square">
-          {currItem && (
+        <div
+          className={`my-8 h-40 aspect-square ${!currItem.name && "border-2"}`}
+        >
+          {currItem.name ? (
             <Image
               className="h-full w-full object-contain rounded-md rounded-tl-3xl rounded-br-3xl"
               height={100}
@@ -55,6 +56,10 @@ const Page = () => {
               src={currItem.img}
               alt={currItem.name}
             />
+          ) : (
+            <h1 className="text-center font-ibm-light text-4xl mt-10">
+              Select an item!
+            </h1>
           )}
         </div>
       </section>
