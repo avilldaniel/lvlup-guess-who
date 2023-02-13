@@ -6,7 +6,7 @@ import { useState } from "react";
 import data from "../../../itemsV3.json";
 export type DataType = typeof data;
 
-const Page: NextPage = () => {
+const Page = () => {
   const [currItem, setCurrItem] = useState<{ name: string; img: string }>({
     name: "",
     img: "",
