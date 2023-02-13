@@ -74,11 +74,11 @@ function App() {
   //   SingleValue<{ value: string; label: string }>
   // >(OPTIONS[0]);
 
-  // const [selected, setSelected] = useState({ category: "", champ: "" });
-  const [selected, setSelected] = useState({
-    category: "supports",
-    champ: "THRESH",
-  });
+  const [selected, setSelected] = useState({ category: "", champ: "" });
+  // const [selected, setSelected] = useState({
+  //   category: "supports",
+  //   champ: "THRESH",
+  // });
   const [champs, setChamps] = useState<
     {
       selected: boolean;
