@@ -24,7 +24,7 @@ const Page = () => {
             <ul className="flex flex-wrap gap-1">
               {data.itemType[item as keyof DataType["itemType"]].map((item) => (
                 <li
-                  className="h-12 aspect-square cursor-pointer border-2 hover:border-brick hover:scale-150 hover:rounded-sm"
+                  className="h-[2.9rem] aspect-square cursor-pointer border-2 hover:border-brick hover:scale-150 hover:rounded-sm"
                   key={item.name}
                   onClick={() =>
                     setCurrItem({ name: item.name, img: item.img })
