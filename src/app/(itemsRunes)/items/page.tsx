@@ -17,7 +17,6 @@ const Page = () => {
       <ul className="w-2/3 flex flex-wrap gap-x-20">
         {Object.keys(data.itemType).map((item, index) => (
           <li key={index}>
-            {/* <h1 className="font-goth tracking-wider text-4xl"> */}
             <h1 className="font-goth tracking-tight text-4xl">
               {/* {item.slice(0, 1).toLocaleUpperCase() + item.slice(1)} */}
               {item.toLocaleUpperCase()}
@@ -44,8 +43,8 @@ const Page = () => {
           </li>
         ))}
       </ul>
-      <section className="w-1/3 flex flex-col pt-20 items-center">
-        <h1 className="font-ibm-semi text-5xl tracking-wide">
+      <section className="w-1/3 flex flex-col pt-20 items-center select-none">
+        <h1 className="font-ibm-semi text-5xl tracking-wide text-center">
           {currItem ? currItem.name : "Item name"}
         </h1>
         <div
