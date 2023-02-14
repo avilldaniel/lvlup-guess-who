@@ -62,7 +62,7 @@ const Page = () => {
             />
           ) : (
             <h1 className="text-center font-ibm-light text-4xl mt-10">
-              Select an item!
+              Select a rune!
             </h1>
           )}
         </div>
