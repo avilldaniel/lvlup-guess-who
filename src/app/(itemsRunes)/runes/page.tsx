@@ -51,9 +51,7 @@ const Page = () => {
         <h1 className="font-ibm-semi text-5xl tracking-wide text-center">
           {currItem ? currItem.name : "Item name"}
         </h1>
-        <div
-          className={`my-8 h-20 aspect-square ${!currItem.name && "border-2"}`}
-        >
+        <div className={`my-8 h-20 aspect-square`}>
           {currItem.name ? (
             <Image
               className="h-full w-full object-contain rounded-tl-lg rounded-br-lg"
