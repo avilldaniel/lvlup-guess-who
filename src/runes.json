@@ -1,0 +1,115 @@
+{
+  "precision": {
+    "1": [
+      { "name": "Press the Attack", "img": "/runes/8005.webp" },
+      { "name": "Lethal Tempo", "img": "/runes/8008.webp" },
+      { "name": "Fleet Footwork", "img": "/runes/8021.webp" },
+      { "name": "Conqueror", "img": "/runes/8010.webp"}
+    ],
+    "2": [
+      { "name": "Overheal", "img": "/runes/9101.webp" },
+      { "name": "Triumph", "img": "/runes/9111.webp" },
+      { "name": "Presence of Mind", "img": "/runes/8009.webp" }
+    ],
+    "3": [
+      { "name": "Legend: Alacrity", "img": "/runes/9104.webp" },
+      { "name": "Legend: Tenacity", "img": "/runes/9105.webp" },
+      { "name": "Legend: Bloodline", "img": "/runes/9103.webp" }
+    ],
+    "4": [
+      { "name": "Coup de Grace", "img": "/runes/8014.webp" },
+      { "name": "Cut Down", "img": "/runes/8017.webp" },
+      { "name": "Last Stand", "img": "/runes/8299.webp" }
+    ]
+  },
+  "domination": {
+    "1": [
+      { "name": "Electrocute", "img": "/runes/8112.webp" },
+      { "name": "Predator", "img": "/runes/8124.webp" },
+      { "name": "Dark Harvest", "img": "/runes/8128.webp" },
+      { "name": "Hail of Blades", "img": "/runes/9923.webp"}
+    ],
+    "2": [
+      { "name": "Cheap Shot", "img": "/runes/8126.webp" },
+      { "name": "Taste of Blood", "img": "/runes/8139.webp" },
+      { "name": "Sudden Impact", "img": "/runes/8143.webp" }
+    ],
+    "3": [
+      { "name": "Zombie Ward", "img": "/runes/8136.webp" },
+      { "name": "Ghost Poro", "img": "/runes/8120.webp" },
+      { "name": "Eyeball Collection", "img": "/runes/8138.webp" }
+    ],
+    "4": [
+      { "name": "Treasure Hunter", "img": "/runes/8135.webp" },
+      { "name": "Ingenious Hunter", "img": "/runes/8134.webp" },
+      { "name": "Relentless Hunter", "img": "/runes/8105.webp" },
+      { "name": "Ultimate Hunter", "img": "/runes/8106.webp"}
+    ]
+  },
+  "sorcery": {
+    "1": [
+      { "name": "Summon Aery", "img": "/runes/8214.webp" },
+      { "name": "Arcane Comet", "img": "/runes/8229.webp" },
+      { "name": "Phase Rush", "img": "/runes/8230.webp" }
+    ],
+    "2": [
+      { "name": "Nullifying Orb", "img": "/runes/8224.webp" },
+      { "name": "Manaflow Band", "img": "/runes/8226.webp" },
+      { "name": "Nimbus Cloak", "img": "/runes/8275.webp" }
+    ],
+    "3": [
+      { "name": "Transcendence", "img": "/runes/8210.webp" },
+      { "name": "Celerity", "img": "/runes/8234.webp" },
+      { "name": "Absolute Focus", "img": "/runes/8233.webp" }
+    ],
+    "4": [
+      { "name": "Scorch", "img": "/runes/8237.webp" },
+      { "name": "Waterwalking", "img": "/runes/8232.webp" },
+      { "name": "Gathering Storm", "img": "/runes/8236.webp" }
+    ]
+  },
+  "resolve": {
+    "1": [
+      { "name": "Grasp of the Undying", "img": "/runes/8437.webp" },
+      { "name": "Aftershock", "img": "/runes/8439.webp" },
+      { "name": "Guardian", "img": "/runes/8465.webp" }
+    ],
+    "2": [
+      { "name": "Demolish", "img": "/runes/8446.webp" },
+      { "name": "Font of Life", "img": "/runes/8463.webp" },
+      { "name": "Shield Bash", "img": "/runes/8401.webp" }
+    ],
+    "3": [
+      { "name": "Conditioning", "img": "/runes/8429.webp" },
+      { "name": "Second Wind", "img": "/runes/8444.webp" },
+      { "name": "Bone Plating", "img": "/runes/8473.webp" }
+    ],
+    "4": [
+      { "name": "Overgrowth", "img": "/runes/8451.webp" },
+      { "name": "Revitalize", "img": "/runes/8453.webp" },
+      { "name": "Unflinching", "img": "/runes/8242.webp" }
+    ]
+  },
+  "inspiration": {
+    "1": [
+      { "name": "Glacial Augment", "img": "/runes/8351.webp" },
+      { "name": "Unsealed Spellbook", "img": "/runes/8360.webp" },
+      { "name": "First Strike", "img": "/runes/8369.webp" }
+    ],
+    "2": [
+      { "name": "Hextech Flashtraption", "img": "/runes/8306.webp" },
+      { "name": "Magical Footwear", "img": "/runes/8304.webp" },
+      { "name": "Perfect Timing", "img": "/runes/8313.webp" }
+    ],
+    "3": [
+      { "name": "Future's Market", "img": "/runes/8321.webp" },
+      { "name": "Minion Dematerializer", "img": "/runes/8316.webp" },
+      { "name": "Biscuit Delivery", "img": "/runes/8345.webp" }
+    ],
+    "4": [
+      { "name": "Cosmic Insight", "img": "/runes/8347.webp" },
+      { "name": "Approach Velocity", "img": "/runes/8410.webp" },
+      { "name": "Time Warp Tonic", "img": "/runes/8352.webp" }
+    ]
+  }
+}

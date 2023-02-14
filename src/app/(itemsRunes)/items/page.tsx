@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { useState } from "react";
 import data from "../../../itemsV3.json";
-export type DataType = typeof data;
+// export type DataType = typeof data;
+type DataType = typeof data;
 
 const Page = () => {
   const [currItem, setCurrItem] = useState<{ name: string; img: string }>({
