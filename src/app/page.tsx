@@ -354,8 +354,8 @@ function App() {
                   : ""
               }`}
               alt={champ.name}
-              width={200}
-              height={200}
+              width={512}
+              height={512}
             />
             {champ.selected ? (
               <div
